@@ -1,6 +1,6 @@
 <template>
   <main>
-    <header class="flex justify-between items-center pt-10 pb-3">
+    <header class="flex justify-between items-center pt-4 pb-3">
       <div>
         <div class="text-2xl font-bold">
           Olá, Fulano!
@@ -10,9 +10,9 @@
           <span class="font-bold" style="font-weight: 700;">Provérbios 16:3</span>
         </div>
       </div>
-      <div>
+      <!-- <div>
         <Avatar label="IS" class="mr-2" size="xlarge" shape="circle" />
-      </div>
+      </div> -->
     </header>
 
     <div class="font-bold pt-5 border border-gray-200 rounded-xl p-4">

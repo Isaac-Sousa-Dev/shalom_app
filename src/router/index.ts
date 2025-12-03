@@ -60,7 +60,7 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
 
   const authStore = useAuthStore();
-  // authStore.checkAuth();
+  //authStore.checkAuth();
   console.log(authStore.isAuthenticated);
   if (to.path === '/login' && authStore.isAuthenticated) {
     next({ name: 'home' })

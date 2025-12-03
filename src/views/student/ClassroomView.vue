@@ -1,88 +1,71 @@
 <template>
     <main>
-      <header class="flex justify-between items-center pt-10 pb-3">
-        <div>
-          <div class="text-4xl font-bold">
-            O começo...
-          </div>
+        
+
+        <header class="flex justify-between items-center pt-8 pb-3">
+            <div>
+                <div class="text-4xl font-bold">
+                    Aula 1
+                </div>
+            </div>
+        </header>
+
+        <div class="">
+            <div style="font-weight: 700; font-size: 20px;">
+                Palavra Chave
+            </div>
+            <div>
+                <div style="display: flex; gap: 5px;">
+                    <InputText fluid v-model="palavraChave" type="text" placeholder="Palavra Chave" />
+                    <Button style="padding: 0px 30px;">Enviar</Button>
+                </div>
+                <span  style="font-size: 12px;">Informe a palavra chave para confirmar sua presença!</span>
+            </div>
         </div>
-      </header>
-  
-      <div class="">
-        <div style="font-weight: 700; font-size: 20px;">
-            Avaliações
+
+        <div class="container flex flex-col gap-8 pt-5">
+            <section>
+                <div style="font-weight: 700; font-size: 20px;">
+                    Descrição
+                </div>
+                <div style="margin-top: 10px;">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam laborum et sapiente excepturi, maxime amet praesentium, doloremque dignissimos quae rem provident rerum repellendus, fugiat id magni! Facilis reiciendis repellat cum.
+                </div>
+            </section>
+
+            <section>
+                <div style="font-weight: 700; font-size: 20px;">
+                    PDFs
+                </div>
+                <div style="margin-top: 10px;" class="gap-4">
+                    <Card style="height: 100px;">
+                        <template #content>
+                            <div>
+                                <h3 style="font-weight: 700; font-style: italic;">PDF - Aula 1 </h3>
+                            </div>
+                            <div style="margin-top: 10px;">
+                                Renovando o espírito
+                            </div>
+                        </template>
+                    </Card>
+                </div>
+            </section>
         </div>
-        <div class="avaliacoes-scroll">
-            <div class="avaliacao-card">Prova 1</div>
-            <div class="avaliacao-card">Prova 2</div>
-            <div class="avaliacao-card">Prova 3</div>
-        </div>
-      </div>
-  
-      <div class="container flex flex-col gap-10 pt-5">
-        <section>
-          <div style="font-weight: 700; font-size: 20px;">
-            Conteúdo
-          </div>
-          <div style="margin-top: 10px;" class="grid grid-cols-2 gap-4">
-            <Card style="height: 130px;">
-              <template #content>
-                <div>
-                  <h3 style="font-weight: 700; font-style: italic;">Aula 1</h3>
-                </div>
-                <div style="margin-top: 10px;">
-                    Renovando o espírito
-                </div>
-              </template>
-            </Card>
-            <Card style="height: 130px;">
-              <template #content>
-                <div>
-                  <h3 style="font-weight: 700; font-style: italic;">Aula 2</h3>
-                </div>
-                <div style="margin-top: 10px;">
-                    Renovando o espírito
-                </div>
-              </template>
-            </Card>
-            <Card style="height: 130px;">
-              <template #content>
-                <div>
-                  <h3 style="font-weight: 700; font-style: italic;">Aula 3</h3>
-                </div>
-                <div style="margin-top: 10px;">
-                    Renovando o espírito
-                </div>
-              </template>
-            </Card>
-            <Card style="height: 130px;">
-              <template #content>
-                <div>
-                  <h3 style="font-weight: 700; font-style: italic;">Aula 4</h3>
-                </div>
-                <div style="margin-top: 10px;">
-                    Renovando o espírito
-                </div>
-              </template>
-            </Card>
-            <Card style="height: 130px;">
-              <template #content>
-                <div>
-                  <h3 style="font-weight: 700; font-style: italic;">Aula 5</h3>
-                </div>
-                <div style="margin-top: 10px;">
-                    Renovando o espírito
-                </div>
-              </template>
-            </Card>
-          </div>
-        </section>
-      </div>
-  
+
     </main>
-  </template>
+</template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+const goBack = () => {
+    router.back();
+}
+
+const palavraChave = ref('teste');
 
 </script>
 

@@ -1,89 +1,95 @@
 <template>
     <main>
-      <header class="flex justify-between items-center pt-10 pb-3">
-        <div>
-          <div class="text-4xl font-bold">
-            O começo...
-          </div>
+        <header class="flex justify-between items-center pt-8 pb-3">
+            <div>
+                <div class="text-4xl font-bold">
+                    O começo...
+                </div>
+            </div>
+        </header>
+
+        <div class="">
+            <div style="font-weight: 700; font-size: 20px;">
+                Avaliações
+            </div>
+            <div class="avaliacoes-scroll">
+                <div class="avaliacao-card">Prova 1</div>
+                <div class="avaliacao-card">Prova 2</div>
+                <div class="avaliacao-card">Prova 3</div>
+            </div>
         </div>
-      </header>
-  
-      <div class="">
-        <div style="font-weight: 700; font-size: 20px;">
-            Avaliações
+
+        <div class="container flex flex-col gap-10 pt-5">
+            <section>
+                <div style="font-weight: 700; font-size: 20px;">
+                    Conteúdo
+                </div>
+                <div style="margin-top: 10px;" class="grid grid-cols-2 gap-4">
+                    <Card @click="navigateTo('/student/classroom/1')" style="height: 130px;">
+                        <template #content>
+                            <div>
+                                <h3 style="font-weight: 700; font-style: italic;">Aula 1</h3>
+                            </div>
+                            <div style="margin-top: 10px;">
+                                Renovando o espírito
+                            </div>
+                        </template>
+                    </Card>
+                    <Card style="height: 130px;">
+                        <template #content>
+                            <div>
+                                <h3 style="font-weight: 700; font-style: italic;">Aula 2</h3>
+                            </div>
+                            <div style="margin-top: 10px;">
+                                Renovando o espírito
+                            </div>
+                        </template>
+                    </Card>
+                    <Card style="height: 130px;">
+                        <template #content>
+                            <div>
+                                <h3 style="font-weight: 700; font-style: italic;">Aula 3</h3>
+                            </div>
+                            <div style="margin-top: 10px;">
+                                Renovando o espírito
+                            </div>
+                        </template>
+                    </Card>
+                    <Card style="height: 130px;">
+                        <template #content>
+                            <div>
+                                <h3 style="font-weight: 700; font-style: italic;">Aula 4</h3>
+                            </div>
+                            <div style="margin-top: 10px;">
+                                Renovando o espírito
+                            </div>
+                        </template>
+                    </Card>
+                    <Card style="height: 130px;">
+                        <template #content>
+                            <div>
+                                <h3 style="font-weight: 700; font-style: italic;">Aula 5</h3>
+                            </div>
+                            <div style="margin-top: 10px;">
+                                Renovando o espírito
+                            </div>
+                        </template>
+                    </Card>
+                </div>
+            </section>
         </div>
-        <div class="avaliacoes-scroll">
-            <div class="avaliacao-card">Prova 1</div>
-            <div class="avaliacao-card">Prova 2</div>
-            <div class="avaliacao-card">Prova 3</div>
-        </div>
-      </div>
-  
-      <div class="container flex flex-col gap-10 pt-5">
-        <section>
-          <div style="font-weight: 700; font-size: 20px;">
-            Conteúdo
-          </div>
-          <div style="margin-top: 10px;" class="grid grid-cols-2 gap-4">
-            <Card style="height: 130px;">
-              <template #content>
-                <div>
-                  <h3 style="font-weight: 700; font-style: italic;">Aula 1</h3>
-                </div>
-                <div style="margin-top: 10px;">
-                    Renovando o espírito
-                </div>
-              </template>
-            </Card>
-            <Card style="height: 130px;">
-              <template #content>
-                <div>
-                  <h3 style="font-weight: 700; font-style: italic;">Aula 2</h3>
-                </div>
-                <div style="margin-top: 10px;">
-                    Renovando o espírito
-                </div>
-              </template>
-            </Card>
-            <Card style="height: 130px;">
-              <template #content>
-                <div>
-                  <h3 style="font-weight: 700; font-style: italic;">Aula 3</h3>
-                </div>
-                <div style="margin-top: 10px;">
-                    Renovando o espírito
-                </div>
-              </template>
-            </Card>
-            <Card style="height: 130px;">
-              <template #content>
-                <div>
-                  <h3 style="font-weight: 700; font-style: italic;">Aula 4</h3>
-                </div>
-                <div style="margin-top: 10px;">
-                    Renovando o espírito
-                </div>
-              </template>
-            </Card>
-            <Card style="height: 130px;">
-              <template #content>
-                <div>
-                  <h3 style="font-weight: 700; font-style: italic;">Aula 5</h3>
-                </div>
-                <div style="margin-top: 10px;">
-                    Renovando o espírito
-                </div>
-              </template>
-            </Card>
-          </div>
-        </section>
-      </div>
-  
+
     </main>
-  </template>
+</template>
 
 <script setup lang="ts">
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
+
+const navigateTo = (path: string) => {
+    router.push(path);
+}
 </script>
 
 <style scoped>
@@ -93,7 +99,7 @@
     overflow-x: auto;
     padding: 5px 0;
     scroll-behavior: smooth;
-    width: 100%;
+    width: 103%;
     /* deixa claro que pode rolar */
     -webkit-overflow-scrolling: touch;
 }
