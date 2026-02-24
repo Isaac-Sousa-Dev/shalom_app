@@ -1,10 +1,14 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import Navbar from '@/components/Navbar.vue'
+import NavbarAuth from '@/components/NavbarAuth.vue'
+import { useAuthStore } from './stores/auth';
+
+const authStore = useAuthStore();
+const isAuthenticated = authStore.isAuthenticated;
 </script>
 
 <template>
-  <Navbar :showBackButton="true" />
+  <NavbarAuth v-if="isAuthenticated" :showBackButton="true" />
   <main style="margin-top: 50px;">
     <RouterView />
   </main>

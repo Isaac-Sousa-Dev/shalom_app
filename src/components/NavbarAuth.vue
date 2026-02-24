@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router';
+import ProfileNavbar from '@/components/ProfileNavbar.vue';
 
 const router = useRouter();
 
@@ -42,9 +43,7 @@ const goBack = () => {
             Voltar
         </div>
 
-        <div>
-            Entrar
-        </div>
+        <ProfileNavbar />
     </header>
 </template>
 
